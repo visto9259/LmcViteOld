@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="src/Helper/ViteTags.php">
+    <PossiblyUnusedProperty>
+      <code><![CDATA[$basePath]]></code>
+      <code><![CDATA[$dev]]></code>
+      <code><![CDATA[$manifestPath]]></code>
+      <code><![CDATA[$reactPlugin]]></code>
+      <code><![CDATA[$viteUrl]]></code>
+    </PossiblyUnusedProperty>
+  </file>
+  <file src="src/Helper/ViteTagsFactory.php">
+    <MixedArgument>
+      <code><![CDATA[$config['vite']['base_path']]]></code>
+      <code><![CDATA[$config['vite']['dev']]]></code>
+      <code><![CDATA[$config['vite']['manifest_path']]]></code>
+      <code><![CDATA[$config['vite']['react_plugin']]]></code>
+      <code><![CDATA[$config['vite']['vite_url']]]></code>
+      <code><![CDATA[$container->get('headLink')]]></code>
+      <code><![CDATA[$container->get('inlineScript')]]></code>
+    </MixedArgument>
+    <MixedArrayAccess>
+      <code><![CDATA[$config['vite']['base_path']]]></code>
+      <code><![CDATA[$config['vite']['dev']]]></code>
+      <code><![CDATA[$config['vite']['manifest_path']]]></code>
+      <code><![CDATA[$config['vite']['react_plugin']]]></code>
+      <code><![CDATA[$config['vite']['vite_url']]]></code>
+    </MixedArrayAccess>
+  </file>
+  <file src="src/Manifest/Chunk.php">
+    <MixedArgument>
+      <code><![CDATA[$chunk['assets'] ?? []]]></code>
+      <code><![CDATA[$chunk['css'] ?? []]]></code>
+      <code><![CDATA[$chunk['dynamicImports'] ?? []]]></code>
+      <code><![CDATA[$chunk['file']]]></code>
+      <code><![CDATA[$chunk['imports'] ?? []]]></code>
+      <code><![CDATA[$chunk['isDynamicEntry'] ?? false]]></code>
+      <code><![CDATA[$chunk['isEntry'] ?? false]]></code>
+      <code><![CDATA[$chunk['name'] ?? null]]></code>
+      <code><![CDATA[$chunk['src'] ?? null]]></code>
+    </MixedArgument>
+    <PossiblyUnusedProperty>
+      <code><![CDATA[$dynamicImports]]></code>
+      <code><![CDATA[$isDynamicEntry]]></code>
+      <code><![CDATA[$name]]></code>
+      <code><![CDATA[$src]]></code>
+    </PossiblyUnusedProperty>
+  </file>
+  <file src="src/Manifest/Manifest.php">
+    <InvalidDocblock>
+      <code><![CDATA[private array $preloadTypes = [];]]></code>
+    </InvalidDocblock>
+    <MixedArgument>
+      <code><![CDATA[json_decode(file_get_contents($this->manifestPath), true)]]></code>
+    </MixedArgument>
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[$chunks]]></code>
+      <code><![CDATA[$chunks]]></code>
+      <code><![CDATA[$this->createStyleTags($chunks)]]></code>
+    </MixedArgumentTypeCoercion>
+    <MixedArrayAccess>
+      <code><![CDATA[$preload['as']]]></code>
+      <code><![CDATA[$preload['type']]]></code>
+    </MixedArrayAccess>
+    <MixedArrayOffset>
+      <code><![CDATA[$chunks[$entry]]]></code>
+      <code><![CDATA[$this->chunks[$entry]]]></code>
+    </MixedArrayOffset>
+    <MixedAssignment>
+      <code><![CDATA[$as]]></code>
+      <code><![CDATA[$entry]]></code>
+      <code><![CDATA[$preload]]></code>
+      <code><![CDATA[$type]]></code>
+    </MixedAssignment>
+    <MixedPropertyTypeCoercion>
+      <code><![CDATA[array_map(
+                fn(array $chunk) => Chunk::create($chunk),
+                json_decode(file_get_contents($this->manifestPath), true)
+            )]]></code>
+    </MixedPropertyTypeCoercion>
+    <PossiblyFalseOperand>
+      <code><![CDATA[strrpos($asset, '.')]]></code>
+    </PossiblyFalseOperand>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[getURL]]></code>
+      <code><![CDATA[preload]]></code>
+      <code><![CDATA[preloadFonts]]></code>
+      <code><![CDATA[preloadImages]]></code>
+    </PossiblyUnusedMethod>
+    <UnusedMethod>
+      <code><![CDATA[createPreloadTags]]></code>
+    </UnusedMethod>
+    <UnusedProperty>
+      <code><![CDATA[$manifestPath]]></code>
+    </UnusedProperty>
+  </file>
+  <file src="src/Tags/ScriptTag.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[getAttrs]]></code>
+      <code><![CDATA[getSrcOrScript]]></code>
+      <code><![CDATA[getType]]></code>
+      <code><![CDATA[isInline]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Tags/Tags.php">
+    <PossiblyUnusedProperty>
+      <code><![CDATA[$preload]]></code>
+    </PossiblyUnusedProperty>
+  </file>
+  <file src="test/ConfigProviderTest.php">
+    <MissingReturnType>
+      <code><![CDATA[testProvidesExpectedConfiguration]]></code>
+      <code><![CDATA[testProvidesExpectedViewHelperConfiguration]]></code>
+    </MissingReturnType>
+  </file>
+</files>
