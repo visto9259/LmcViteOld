@@ -15,6 +15,7 @@ use function file_exists;
 use function file_get_contents;
 use function implode;
 use function is_readable;
+use function is_string;
 use function json_decode;
 use function ob_get_clean;
 use function ob_start;
@@ -76,6 +77,7 @@ final class Manifest
                 );
             }
 
+            /** TODO add error checking */
             $this->chunks = array_map(
                 fn(array $chunk) => Chunk::create($chunk),
                 json_decode(file_get_contents($this->manifestPath), true)
@@ -174,8 +176,10 @@ final class Manifest
                 window.__vite_plugin_react_preamble_installed__ = true;
             JS;
                 // phpcs:enable
-                $script       = ob_get_clean();
-                $scriptTags[] = new ScriptTag($script, true, 'module');
+                $script = ob_get_clean();
+                if (is_string($script)) {
+                    $scriptTags[] = new ScriptTag($script, true, 'module');
+                }
             }
             $scriptTags[] = new ScriptTag($this->viteUrl . '@vite/client', false, 'module');
             foreach ($entries as $entry) {

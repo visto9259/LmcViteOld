@@ -7,9 +7,11 @@ namespace LmcTest\Vite;
 use Lmc\Vite\Helper\ViteTags;
 use Lmc\Vite\Helper\ViteTagsFactory;
 use Lmc\Vite\Module;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-class ModuleTest extends TestCase
+#[CoversClass(Module::class)]
+final class ModuleTest extends TestCase
 {
     public function testModuleProvidesExpectationConfig(): void
     {

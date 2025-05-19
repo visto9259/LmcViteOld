@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+<files psalm-version="6.10.3@90b5b9f5e7c8e441b191d3c82c58214753d7c7c1">
   <file src="src/Helper/ViteTags.php">
     <PossiblyUnusedProperty>
       <code><![CDATA[$basePath]]></code>
@@ -10,9 +10,12 @@
     </PossiblyUnusedProperty>
   </file>
   <file src="src/Helper/ViteTagsFactory.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): ViteTags]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['vite']['base_path']]]></code>
-      <code><![CDATA[$config['vite']['dev']]]></code>
+      <code><![CDATA[$config['vite']['dev'] ?? false]]></code>
       <code><![CDATA[$config['vite']['manifest_path']]]></code>
       <code><![CDATA[$config['vite']['react_plugin']]]></code>
       <code><![CDATA[$config['vite']['vite_url']]]></code>
@@ -78,6 +81,9 @@
                 json_decode(file_get_contents($this->manifestPath), true)
             )]]></code>
     </MixedPropertyTypeCoercion>
+    <PossiblyFalseArgument>
+      <code><![CDATA[file_get_contents($this->manifestPath)]]></code>
+    </PossiblyFalseArgument>
     <PossiblyFalseOperand>
       <code><![CDATA[strrpos($asset, '.')]]></code>
     </PossiblyFalseOperand>

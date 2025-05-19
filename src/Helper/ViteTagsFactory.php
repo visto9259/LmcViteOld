@@ -11,7 +11,7 @@ use Laminas\View\HelperPluginManager;
 use Lmc\Vite\Manifest\Manifest;
 use Psr\Container\ContainerInterface;
 
-class ViteTagsFactory implements FactoryInterface
+final class ViteTagsFactory implements FactoryInterface
 {
     /**
      * @inheritDoc
@@ -23,6 +23,7 @@ class ViteTagsFactory implements FactoryInterface
         if (! isset($config['vite'])) {
             throw new ServiceNotCreatedException('Vite configuration not found.');
         }
+        // TODO Add error checking of config
         $manifest = new Manifest(
             $config['vite']['dev'] ?? false,
             $config['vite']['manifest_path'],

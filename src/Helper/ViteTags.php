@@ -9,7 +9,7 @@ use Laminas\View\Helper\HeadLink;
 use Laminas\View\Helper\InlineScript;
 use Lmc\Vite\Manifest\Manifest;
 
-class ViteTags extends AbstractHelper
+final class ViteTags extends AbstractHelper
 {
     protected bool $dev            = false;
     protected string $viteUrl      = 'http://localhost:5173/';

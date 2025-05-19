@@ -7,7 +7,7 @@ namespace Lmc\Vite;
 use Lmc\Vite\Helper\ViteTags;
 use Lmc\Vite\Helper\ViteTagsFactory;
 
-class ConfigProvider
+final class ConfigProvider
 {
     public function __invoke(): array
     {
