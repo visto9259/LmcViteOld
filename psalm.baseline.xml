@@ -14,21 +14,9 @@
       <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null): ViteTags]]></code>
     </MissingOverrideAttribute>
     <MixedArgument>
-      <code><![CDATA[$config['vite']['base_path']]]></code>
-      <code><![CDATA[$config['vite']['dev'] ?? false]]></code>
-      <code><![CDATA[$config['vite']['manifest_path']]]></code>
-      <code><![CDATA[$config['vite']['react_plugin']]]></code>
-      <code><![CDATA[$config['vite']['vite_url']]]></code>
       <code><![CDATA[$container->get('headLink')]]></code>
       <code><![CDATA[$container->get('inlineScript')]]></code>
     </MixedArgument>
-    <MixedArrayAccess>
-      <code><![CDATA[$config['vite']['base_path']]]></code>
-      <code><![CDATA[$config['vite']['dev']]]></code>
-      <code><![CDATA[$config['vite']['manifest_path']]]></code>
-      <code><![CDATA[$config['vite']['react_plugin']]]></code>
-      <code><![CDATA[$config['vite']['vite_url']]]></code>
-    </MixedArrayAccess>
   </file>
   <file src="src/Manifest/Chunk.php">
     <MixedArgument>
