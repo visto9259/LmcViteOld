@@ -50,7 +50,6 @@ class ViteTagsFactoryTest extends TestCase
         $this->assertInstanceOf(ViteTags::class, $factory->__invoke($container, ViteTags::class));
     }
 
-
     public static function invalidConfigProvider(): array
     {
         return [
