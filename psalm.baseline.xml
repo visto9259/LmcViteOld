@@ -30,12 +30,6 @@
       <code><![CDATA[$chunk['name'] ?? null]]></code>
       <code><![CDATA[$chunk['src'] ?? null]]></code>
     </MixedArgument>
-    <PossiblyUnusedProperty>
-      <code><![CDATA[$dynamicImports]]></code>
-      <code><![CDATA[$isDynamicEntry]]></code>
-      <code><![CDATA[$name]]></code>
-      <code><![CDATA[$src]]></code>
-    </PossiblyUnusedProperty>
   </file>
   <file src="src/Manifest/Manifest.php">
     <InvalidDocblock>
@@ -90,21 +84,25 @@
   </file>
   <file src="src/Tags/ScriptTag.php">
     <PossiblyUnusedMethod>
-      <code><![CDATA[getAttrs]]></code>
       <code><![CDATA[getSrcOrScript]]></code>
-      <code><![CDATA[getType]]></code>
-      <code><![CDATA[isInline]]></code>
     </PossiblyUnusedMethod>
-  </file>
-  <file src="src/Tags/Tags.php">
-    <PossiblyUnusedProperty>
-      <code><![CDATA[$preload]]></code>
-    </PossiblyUnusedProperty>
   </file>
   <file src="test/ConfigProviderTest.php">
     <MissingReturnType>
       <code><![CDATA[testProvidesExpectedConfiguration]]></code>
       <code><![CDATA[testProvidesExpectedViewHelperConfiguration]]></code>
     </MissingReturnType>
+  </file>
+  <file src="test/Helper/ViteTagsFactoryTest.php">
+    <MixedReturnStatement>
+      <code><![CDATA[array]]></code>
+    </MixedReturnStatement>
+  </file>
+  <file src="test/Manifest/ManifestTest.php">
+    <UnusedVariable>
+      <code><![CDATA[$manifest]]></code>
+      <code><![CDATA[$manifest]]></code>
+      <code><![CDATA[$manifest]]></code>
+    </UnusedVariable>
   </file>
 </files>

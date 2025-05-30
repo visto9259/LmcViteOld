@@ -7,7 +7,7 @@ namespace LmcTest\Vite\Manifest;
 use Lmc\Vite\Manifest\Chunk;
 use PHPUnit\Framework\TestCase;
 
-class ChunkTest extends TestCase
+final class ChunkTest extends TestCase
 {
     public function testConstruct(): void
     {

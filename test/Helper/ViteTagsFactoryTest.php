@@ -14,7 +14,7 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(ViteTagsFactory::class)]
-class ViteTagsFactoryTest extends TestCase
+final class ViteTagsFactoryTest extends TestCase
 {
     public function testNoConfig(): void
     {

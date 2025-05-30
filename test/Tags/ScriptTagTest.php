@@ -7,7 +7,7 @@ namespace LmcTest\Vite\Tags;
 use Lmc\Vite\Tags\ScriptTag;
 use PHPUnit\Framework\TestCase;
 
-class ScriptTagTest extends TestCase
+final class ScriptTagTest extends TestCase
 {
     public function testDefault(): void
     {

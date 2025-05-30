@@ -8,7 +8,7 @@ use Lmc\Vite\Manifest\Manifest;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
-class ManifestTest extends TestCase
+final class ManifestTest extends TestCase
 {
     public function testCreateDev(): void
     {
